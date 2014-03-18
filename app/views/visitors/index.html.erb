@@ -1,0 +1,23 @@
+<% content_for :title do %>Results<% end %>
+<h3>Favorite picks so far</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="success">Favorite City</th>
+      <th class="warning">Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visitors.each do |visitor| %>
+      <tr>
+        <td class="success"><%= visitor.favorite %></td>
+        <td class="warning"><%= visitor.comment %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
